@@ -4,6 +4,39 @@ All notable changes to this project will be documented in this file.
 
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.1.0/).
 
+## [0.121.16](https://github.com/promptfoo/promptfoo/compare/0.121.15...0.121.16) (2026-06-12)
+
+
+### Features
+
+* **providers:** add Claude Fable and Mythos support ([#9671](https://github.com/promptfoo/promptfoo/issues/9671)) ([09435af](https://github.com/promptfoo/promptfoo/commit/09435af291d953e33e5e7f8813e37925a41a9f93))
+* **redteam:** publish all four promptfoo skills to the Claude Code marketplace ([#9665](https://github.com/promptfoo/promptfoo/issues/9665)) ([53a7266](https://github.com/promptfoo/promptfoo/commit/53a7266b1d206c787454f0cf00b348ce6fda54dc))
+
+
+### Bug Fixes
+
+* address AI quality findings ([#9637](https://github.com/promptfoo/promptfoo/issues/9637)) ([c54a306](https://github.com/promptfoo/promptfoo/commit/c54a30668ad8319d76c20ae96e6680ad6c51a2c6))
+* **assertions:** respect inverse when an object value can't parse output as JSON ([#9626](https://github.com/promptfoo/promptfoo/issues/9626)) ([052a4e1](https://github.com/promptfoo/promptfoo/commit/052a4e1e3ebf62818243cac3cdd6987546dcc052))
+* **build:** make biome Style Check run deterministically (fix stack-overflow no-op) + fix unmasked lint errors ([#9631](https://github.com/promptfoo/promptfoo/issues/9631)) ([836733f](https://github.com/promptfoo/promptfoo/commit/836733ff89e1388b3193b31d308b858eadc72bc4))
+* **ci:** update architecture edge baseline for evalTableUtils CSV imports ([#9633](https://github.com/promptfoo/promptfoo/issues/9633)) ([ea3348e](https://github.com/promptfoo/promptfoo/commit/ea3348e3d1ff72fd7dabb02787b709561a41068f))
+* **cli:** accept falsy provider outputs in validation ([#9644](https://github.com/promptfoo/promptfoo/issues/9644)) ([c5e4b80](https://github.com/promptfoo/promptfoo/commit/c5e4b80a4803f554a7d78ca23b6d821c1fc10841))
+* **code-scan:** keep SARIF skip errors off stdout ([#9690](https://github.com/promptfoo/promptfoo/issues/9690)) ([e1e062d](https://github.com/promptfoo/promptfoo/commit/e1e062db849a320f934a94210ea9400720fdbdf5))
+* **code-scan:** restore log level after structured scans ([#9196](https://github.com/promptfoo/promptfoo/issues/9196)) ([ca4821c](https://github.com/promptfoo/promptfoo/commit/ca4821c8e3f3e428a50678d774bf5a30eaa328f4))
+* **codex:** propagate trace identity to CLI telemetry ([#9703](https://github.com/promptfoo/promptfoo/issues/9703)) ([29db0a8](https://github.com/promptfoo/promptfoo/commit/29db0a829571fb7df2b87c601da49efa7b1d6d98))
+* **deps:** constrain undici to &lt;7.27.1 to fix Node 26 "terminated" error ([#9668](https://github.com/promptfoo/promptfoo/issues/9668)) ([2774371](https://github.com/promptfoo/promptfoo/commit/2774371660c7fc92eaac6891e4b8152a30940399))
+* **deps:** gate Content-Encoding strip after decompress and require undici &gt;=7.27.1 &lt;8 ([#9683](https://github.com/promptfoo/promptfoo/issues/9683)) ([d6031dc](https://github.com/promptfoo/promptfoo/commit/d6031dc65da5df55db034026ec7bbe3a74f1c2ce))
+* **deps:** update anthropic packages ([#9634](https://github.com/promptfoo/promptfoo/issues/9634)) ([d932250](https://github.com/promptfoo/promptfoo/commit/d932250ac0d40abf59a0540ed2d860e01a046e8c))
+* **deps:** update anthropic packages ([#9651](https://github.com/promptfoo/promptfoo/issues/9651)) ([4fcaa87](https://github.com/promptfoo/promptfoo/commit/4fcaa87067fefd4279a597cceb03dc3834fc5924))
+* **eval:** escape CSV formula injection in result exports ([#9609](https://github.com/promptfoo/promptfoo/issues/9609)) ([c039bff](https://github.com/promptfoo/promptfoo/commit/c039bffb23fcc4bb36d5fe38daea119f8cd30645))
+* **eval:** restore CSV export architecture boundary ([#9630](https://github.com/promptfoo/promptfoo/issues/9630)) ([7aaa3ed](https://github.com/promptfoo/promptfoo/commit/7aaa3ed9e8c917411808aa351190e13f33d1bef5))
+* honor remote data-sharing controls ([#9664](https://github.com/promptfoo/promptfoo/issues/9664)) ([49a175a](https://github.com/promptfoo/promptfoo/commit/49a175a877b828893f2a9e03420816d192cdbb5f))
+* preserve prompt function across beforeAll extension hooks ([#9661](https://github.com/promptfoo/promptfoo/issues/9661)) ([d984059](https://github.com/promptfoo/promptfoo/commit/d9840593addb070b31504fec2db332e01c320bc6))
+* **providers:** preserve Anthropic thinking token usage ([#9680](https://github.com/promptfoo/promptfoo/issues/9680)) ([6b41b43](https://github.com/promptfoo/promptfoo/commit/6b41b4332f79f89a7647293bd8e41c2d383ee4de))
+* **redteam:** allow token plugins with multi-input ([#9657](https://github.com/promptfoo/promptfoo/issues/9657)) ([03f888f](https://github.com/promptfoo/promptfoo/commit/03f888fd81b47ae273d194054b346c312de90214))
+* **redteam:** make skill commands and script paths work for marketplace users ([#9670](https://github.com/promptfoo/promptfoo/issues/9670)) ([aba48e4](https://github.com/promptfoo/promptfoo/commit/aba48e4cdef5b37fd7816ff7dd4ac42a442e1238))
+* **redteam:** preserve team context in cloud tasks ([#9677](https://github.com/promptfoo/promptfoo/issues/9677)) ([a7bac57](https://github.com/promptfoo/promptfoo/commit/a7bac57018ea354b7249ec595901235a50b187f5))
+* **redteam:** publish marketplace skill fixes ([#9676](https://github.com/promptfoo/promptfoo/issues/9676)) ([3c761c5](https://github.com/promptfoo/promptfoo/commit/3c761c5d32b806fda229379a8937e50b1c05bb77))
+
 ## [0.121.15](https://github.com/promptfoo/promptfoo/compare/0.121.14...0.121.15) (2026-06-05)
 
 ### Features
